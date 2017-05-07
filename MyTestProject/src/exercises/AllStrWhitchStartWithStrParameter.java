@@ -17,7 +17,7 @@ public class AllStrWhitchStartWithStrParameter {
 		// TODO Auto-generated method stub
 		List<String> collectionString = new ArrayList<String>();
 		List<String> collectionResult = new ArrayList<String>();
-		
+		 
 		collectionString.add("sdjkvdjkbv");
 		collectionString.add("djksvjk");
 		collectionString.add("djksvjkdksjchjdbvjhdfjh");

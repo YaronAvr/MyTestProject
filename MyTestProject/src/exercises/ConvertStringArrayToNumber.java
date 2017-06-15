@@ -1,15 +1,5 @@
 package exercises;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 public class ConvertStringArrayToNumber {
 

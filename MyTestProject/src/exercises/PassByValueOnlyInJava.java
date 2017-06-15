@@ -41,11 +41,7 @@ public class PassByValueOnlyInJava {
 		System.out.println(employee1);
 		System.out.println(employee2);
 	}
-	
-	
-	
-	
-	
+
 
 }
 class Employee {

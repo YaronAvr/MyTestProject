@@ -56,7 +56,7 @@ public class AllStrWhitchStartWithStrParameter {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < maxLength; i++) {
 			for (String s : collectionString) {
-				if (s.startsWith(paramStr,i)) {
+				if (s.startsWith(paramStr,i) && !collectionResult.contains(s)) {
 					collectionResult.add(s);
 				}
 			}

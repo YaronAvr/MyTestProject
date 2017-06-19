@@ -1,21 +1,28 @@
 package test;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 
 
 public class Demo {
 	
-	public static int num = 3;
-    public Demo() {
-        System.out.println("Hi!");
-    }
+	
+    
 
     public static void main(String[] args) throws Exception {
-        Class clazz = Class.forName("test.Demo");
-        //Demo demo = (Demo) clazz.newInstance();
-        
-        Demo demo = new Demo();
-        System.out.println(clazz.getField("num").getName());
-        
+       
+    	String str = "jkfzfjkdnvkdjkv";
+    	
+    	char [] charArr = new char[str.length()];
+    	
+    	for (int i = 0; i < charArr.length; i++) {
+			charArr[i] = str.charAt(str.length()-i - 1);
+		}
+    	System.out.println(charArr);
+    	
+    	
         
     }
 }

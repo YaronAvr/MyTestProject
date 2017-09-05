@@ -14,7 +14,7 @@ public class ReverseStr {
 		String s = "abcd";
 		StringBuffer buffer = new StringBuffer(s);
 		
-		System.out.println(buffer.reverse().toString());
+		System.out.println(buffer.reverse());
 		
 		Integer a = new Integer(3);
 		a.doubleValue();

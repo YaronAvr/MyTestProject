@@ -3,18 +3,21 @@ package exercises;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class ScorePerSubjectByLowId {
 
 	
 	public static List<String> list;
 	public static List<Item> itemList;
+	public static Set<Item> itemSet;
 	public static Map<String, Integer> map;
 	
-	 class Item implements Comparable<Item> {
+	 class Item  implements Comparable<Item> {
 		
 		Long id;
 		String subject;
@@ -32,6 +35,28 @@ public class ScorePerSubjectByLowId {
 			// TODO Auto-generated method stub
 			return this.id.compareTo(o.id);
 		}
+		
+		@Override
+		public boolean equals(Object obj) {
+			// TODO Auto-generated method stub
+			
+			if (obj instanceof Item) {
+				return this.subject.equals(((Item) obj).subject);
+			}
+			return false;
+		}
+		
+		@Override
+		public int hashCode() {
+			// TODO Auto-generated method stub
+			return this.subject.hashCode();
+		}
+		
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return "id: " + this.id + " , " + "subject: " + this.subject + " , " +  "score: " + this.score;  
+		}
 	}
 	
 	
@@ -47,9 +72,18 @@ public class ScorePerSubjectByLowId {
 
 		Collections.sort(itemList);
 		
-		insertToMap();
+		itemSet.addAll(itemList);
 		
-		printMap();
+		itemList.clear();
+		
+		itemList.addAll(itemSet);
+		
+		
+		
+		System.out.println(itemList);
+		//insertToMap();
+		
+		//printMap();
 
 	}
 
@@ -107,6 +141,8 @@ public class ScorePerSubjectByLowId {
 		list.add("3|english|82");
 		list.add("45|english|99");
 		list.add("2|data struncture|100");
+		
+		ScorePerSubjectByLowId.itemSet = new HashSet<ScorePerSubjectByLowId.Item>();
 	}
 
 	private static Map<String, Integer> insertToMap() {
